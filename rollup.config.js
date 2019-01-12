@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel'
+import { eslint } from 'rollup-plugin-eslint'
 
 export default {
   input: 'src/index.js',
@@ -13,6 +14,7 @@ export default {
     'vue-styled-components'
   ],
   plugins: [
+    eslint(),
     babel({
       exclude: 'node_modules/**',
       presets: ['@babel/preset-env'],
