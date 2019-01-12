@@ -112,7 +112,7 @@ export default function (optionsCallback) {
         ) : ''
 
         return (
-          <Header class={ this.getClasses('header') }>
+          <Header modal-header class={ this.getClasses('header') }>
             { titleEl }
             { closeButtonEl }
           </Header>
@@ -120,7 +120,7 @@ export default function (optionsCallback) {
       },
       getFooterEl () {
         return this.$slots.footer ? (
-          <footer class={ this.getClasses('footer') }>
+          <footer modal-footer class={ this.getClasses('footer') }>
             { this.$slots.footer }
           </footer>
         ) : ''
@@ -129,16 +129,18 @@ export default function (optionsCallback) {
     render () {
       return (
         <Wrapper
+          modal-wrapper
           v-show={ this.opened }
           class={ this.getClasses('base') }
         >
           <Underlay
+            modal-underlay
             class={ this.getClasses('underlay') }
             onClick={ this.close }
           />
-          <Modal class={ this.getClasses('modal') }>
+          <Modal modal class={ this.getClasses('modal') }>
             { this.getHeaderEl() }
-            <div class={ this.getClasses('body') }>
+            <div modal-body class={ this.getClasses('body') }>
               { this.$slots.default }
             </div>
             { this.getFooterEl() }
