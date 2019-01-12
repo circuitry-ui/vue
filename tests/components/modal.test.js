@@ -1,5 +1,14 @@
+import { mount } from '@vue/test-utils'
 import modal from '../../src/components/modal'
 
-test('check', () => {
-  expect(1 + 2).toBe(3)
+describe('Modal', () => {
+  const wrapper = mount(modal(), {
+    propsData: {
+      opened: false
+    }
+  })
+
+  it('initially renders hidden', () => {
+    expect(wrapper.vm.$el.style.display).toBe('none')
+  })
 })
