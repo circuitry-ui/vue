@@ -28,21 +28,23 @@ const Header = styled.header`
   justify-content: space-between;
 `
 
+const getDefaultOptions = () => ({
+  props: {},
+  base: { classes: null },
+  underlay: { classes: null },
+  modal: { classes: null },
+  header: { classes: null },
+  title: {
+    tag: 'h2',
+    classes: null
+  },
+  closeButton: { classes: null },
+  body: { classes: null },
+  footer: { classes: null }
+})
+
 export default function (optionsCallback) {
-  const options = {
-    props: {},
-    base: { classes: null },
-    underlay: { classes: null },
-    modal: { classes: null },
-    header: { classes: null },
-    title: {
-      tag: 'h2',
-      classes: null
-    },
-    closeButton: { classes: null },
-    body: { classes: null },
-    footer: { classes: null }
-  }
+  const options = getDefaultOptions()
 
   if (typeof optionsCallback === 'function') {
     optionsCallback(options)
