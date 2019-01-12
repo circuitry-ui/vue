@@ -10,16 +10,21 @@
   "scripts": {
     "build": "npm run build:umd & npm run build:es",
     "build:umd": "rollup --config rollup.config.js --format umd --file dist/circuitry.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file dist/circuitry.esm.js"
+    "build:es": "rollup --config rollup.config.js --format es --file dist/circuitry.esm.js",
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-jest": "^23.6.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "eslint-plugin-vue": "^5.1.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.13.1",
     "rollup": "^1.1.0",
     "rollup-plugin-babel": "^4.3.0",
     "rollup-plugin-eslint": "^5.0.0",
