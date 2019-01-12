@@ -91,12 +91,12 @@ export default function (optionsCallback) {
 
         return classOption
       },
-      getHeaderEl (h) {
+      getHeaderEl () {
         if (!this.label && !this.$slots.header) {
           return ''
         }
 
-        let titleEl = this.$slots.header ? this.$slots.header : h(
+        let titleEl = this.$slots.header ? this.$slots.header : this.$createElement(
           options.title.tag,
           { class: this.getClasses('title') },
           this.label
@@ -124,7 +124,7 @@ export default function (optionsCallback) {
         ) : ''
       }
     },
-    render (h) {
+    render () {
       return (
         <Wrapper
           v-show={ this.opened }
@@ -135,7 +135,7 @@ export default function (optionsCallback) {
             onClick={ this.close }
           />
           <Modal class={ this.getClasses('modal') }>
-            { this.getHeaderEl(h) }
+            { this.getHeaderEl() }
             <div class={ this.getClasses('body') }>
               { this.$slots.default }
             </div>
