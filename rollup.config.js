@@ -15,10 +15,6 @@ export default {
   ],
   plugins: [
     eslint(),
-    babel({
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-env'],
-      plugins: ['transform-vue-jsx']
-    })
+    babel()
   ]
 }
