@@ -1,0 +1,28 @@
+{
+  "name": "@lantern/circuitry",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/circuitry.umd.js",
+  "module": "dist/circuitry.esm.js",
+  "browser": {
+    "./modal": "src/components/modal.js"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es",
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/circuitry.umd.js",
+    "build:es": "rollup --config rollup.config.js --format es --file dist/circuitry.esm.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.3.0",
+    "vue": "^2.5.21",
+    "vue-styled-components": "^1.4.4",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
