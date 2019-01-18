@@ -8,9 +8,7 @@
     "./modal": "src/components/modal.js"
   },
   "scripts": {
-    "build": "npm run build:umd & npm run build:es",
-    "build:umd": "rollup --config rollup.config.js --format umd --file dist/circuitry.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file dist/circuitry.esm.js",
+    "build": "rollup --config rollup.config.js",
     "test": "jest",
     "watch": "jest --watchAll"
   },
