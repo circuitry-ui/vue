@@ -30,7 +30,7 @@ const Header = styled.header`
 
 const getDefaultOptions = () => ({
   props: {},
-  base: { classes: null },
+  wrapper: { classes: null },
   underlay: { classes: null },
   modal: { classes: null },
   header: { classes: null },
@@ -131,7 +131,7 @@ export default function (optionsCallback) {
         <Wrapper
           modal-wrapper
           v-show={ this.opened }
-          class={ this.getClasses('base') }
+          class={ this.getClasses('wrapper') }
         >
           <Underlay
             modal-underlay

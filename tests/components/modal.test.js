@@ -109,7 +109,7 @@ describe('Modal', () => {
 
   it('can customize wrapper classes with a string', () => {
     const wrapper = mount(modal(options => {
-      options.base.classes = 'modal wrapper'
+      options.wrapper.classes = 'modal wrapper'
     }), { propsData: { opened: true } })
     expect(wrapper.contains('[modal-wrapper].modal.wrapper')).toBe(true)
   })
