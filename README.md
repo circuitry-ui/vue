@@ -12,7 +12,28 @@ Requires `vue` and `vue-styled-components`
 
 ## Usage
 
-TODO
+This package does not automatically register any components. The main purpose behind Circuitry is so that you can build and configure a UI components kit specifically for your app. To use circuitry, you will need to import and register any components that you want to use:
+
+```js
+import * as circuitry from '@lantern/vue-circuitry'
+//or
+import { modal } from '@lantern/circuitry'
+
+// global registration
+Vue.component('Modal', circuitry.modal({
+  // options...
+}))
+
+// local component registration
+{
+  components: {
+    Modal: circuitry.modal({
+      // options...
+    })
+  }
+}
+
+```
 
 ## Development
 
@@ -20,9 +41,15 @@ Clone app to your local machine
 
 `npm install`
 
-Run tests
+### Running tests
+
+The following command will launch the Jest test suite. It will listen for any changes to files an rerun the test suite:
 
 `npm run watch`
+
+If you just want to run the test suite once, you can run this command:
+
+`npm run test`
 
 You may run into issues with `eslint` if you `npm link` this into another project. Include this this line in your `.eslintignore` file:
 
