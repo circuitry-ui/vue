@@ -1,4 +1,4 @@
-# Circuirty
+# Circuitry
 
 Circuitry is a UI kit generation tool. Circuitry gives you the ability to quickly and easily create UI components for your web app with out relying on any specific CSS framework. You can style the components however you would like without being married to a particular framework or design style. Use whatever CSS framwork you like: Bootstrap, Foundation, Bulma, Tailwind, Material Design, etc, etc, etc.
 
