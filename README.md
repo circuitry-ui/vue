@@ -6,7 +6,7 @@ Often times, you will find a great UI Kit but you don't like the styling or the 
 
 ## Installation
 
-`npm i @lantern/vue-circuitry`
+`npm i @circuitry/vue`
 
 Requires `vue` and `vue-styled-components`
 
@@ -15,9 +15,9 @@ Requires `vue` and `vue-styled-components`
 This package does not automatically register any components. The main purpose behind Circuitry is so that you can build and configure a UI components kit specifically for your app. To use circuitry, you will need to import and register any components that you want to use:
 
 ```js
-import * as circuitry from '@lantern/vue-circuitry'
+import * as circuitry from '@circuitry/vue'
 //or
-import { modal } from '@lantern/circuitry'
+import { modal } from '@circuitry/vue'
 
 // global registration
 Vue.component('Modal', circuitry.modal({

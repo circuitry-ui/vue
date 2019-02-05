@@ -1,7 +1,6 @@
 {
-  "name": "@lantern/vue-circuitry",
+  "name": "@circuitry/vue",
   "version": "0.1.0",
-  "private": true,
   "main": "dist/circuitry.umd.js",
   "module": "dist/circuitry.esm.js",
   "browser": {
